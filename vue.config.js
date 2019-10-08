@@ -8,16 +8,18 @@ module.exports = {
     lintOnSave: 'error',
     configureWebpack: {
         resolve: {
-            extensions: ['.js', '.vue'],
+            extensions: ['.js', '.vue', '.scss'],
             alias: {
                 'vue$': 'vue/dist/vue.esm.js',
                 '@root': resolve('./'),
                 '@src': resolve('src/'),
                 '@views': resolve('src/views/'),
                 '@assets': resolve('src/assets/'),
+                '@ui-kit': resolve('src/ui-kit/'),
                 '@components': resolve('src/components/'),
                 '@router': resolve('src/router/'),
-                '@vuex': resolve('src/vuex/')
+                '@vuex': resolve('src/vuex/'),
+                '@styles': resolve('src/scss/')
             },
         },
         plugins: [
@@ -41,7 +43,6 @@ module.exports = {
         ]
     },
     chainWebpack: config => {
-        // удаляем prefetch плагин:
         config.plugins.delete('prefetch');
     }
 }
