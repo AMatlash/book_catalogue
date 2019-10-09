@@ -14,12 +14,14 @@
         "string-quotes": "single",
         "rule-empty-line-before": [
             "always",
-            except: [
-                "first-nested",
-                "after-single-line-comment"
-            ],
-            ignore: [
-            ]
+            {
+                except: [
+                    "first-nested",
+                    "after-single-line-comment"
+                ],
+                ignore: [
+                ]
+            }
         ],
         "declaration-colon-space-before": "never",
         "declaration-colon-space-after": "always",
@@ -28,7 +30,7 @@
         "media-feature-range-operator-space-before": "never",
         "media-feature-range-operator-space-after": "never",
         "number-leading-zero": "never",
-        "order/order": [,
+        "order/order": [
             "declarations",
             {
                 "type": "at-rule",
@@ -44,7 +46,11 @@
             },
             {
                 "type": "rule",
-                "selector": "^&_"
+                "selector": "^&(_|--)"
+            },
+            {
+                "type": "rule",
+                "selector": "^&__"
             },
             {
                 "type": "rule",
