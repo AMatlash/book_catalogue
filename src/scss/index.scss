@@ -10,5 +10,8 @@ $contrast-color: #909;
 $contrast-color-disabled: #636;
 
 $text-color: #000b;
-$text-color-hover: #000;
+$text-color-hover: #000e;
 $text-color-disabled: #0005;
+
+$element-shadow: 0 0 5px rgba(0, 0, 0, .5);
+$element-shadow-error: 0 0 5px $contrast-color;

@@ -15,8 +15,9 @@ module.exports = {
                 '@src': resolve('src/'),
                 '@views': resolve('src/views/'),
                 '@assets': resolve('src/assets/'),
-                '@ui-kit': resolve('src/ui-kit/'),
                 '@components': resolve('src/components/'),
+                '@ui-kit': resolve('src/components/ui-kit/'),
+                '@typography': resolve('src/components/ui-kit/typography/'),
                 '@router': resolve('src/router/'),
                 '@vuex': resolve('src/vuex/'),
                 '@styles': resolve('src/scss/')

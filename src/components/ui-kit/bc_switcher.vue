@@ -10,18 +10,22 @@
             }]"
             @click="selectIcon(index)"
         >
-            <i
-                class="material-icons bc-switcher__button__icon"
-            >
-                {{ icon }}
-            </i>
+            <bc_icon
+                big
+                :name="icon"
+            />
         </div>
     </div>
 </template>
 
 <script>
+import * as typography from '@typography';
+
 export default {
     name: 'bc_switcher',
+    components: {
+        ...typography
+    },
     model: {
         prop: 'selected',
         event: 'change'
@@ -41,14 +45,14 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '@styles';
 
 .bc-switcher {
     display: flex;
     flex-direction: row;
     border-radius: 25px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    box-shadow: $element-shadow;
     user-select: none;
 
     &__button {
@@ -81,10 +85,6 @@ export default {
             &:hover {
                 background-color: $primary-color;
             }
-        }
-
-        &__icon {
-            font-size: 30pt;
         }
     }
 }

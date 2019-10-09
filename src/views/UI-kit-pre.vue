@@ -1,57 +1,73 @@
 <template>
     <div class="ui-kit-pre">
-        <div class="ui-kit-pre__group">
+        <div class="ui-kit-pre__elements-group">
             <bc_button
-                label="Кнопка"
+                class="ui-kit-pre__button"
+                label="Active"
             />
             <bc_button
-                label="Кнопка"
+                class="ui-kit-pre__button"
+                label="Disabled"
                 disabled
             />
+        </div>
+        <div class="ui-kit-pre__elements-group">
             <bc_button
-                label="Кнопка"
+                class="ui-kit-pre__button"
+                label="Active"
                 simple
             />
             <bc_button
-                label="Кнопка"
+                class="ui-kit-pre__button"
+                label="Disabled"
                 simple
                 disabled
             />
         </div>
-        <div  class="ui-kit-pre__group">
+        <div  class="ui-kit-pre__elements-group">
             <bc_button
+                class="ui-kit-pre__button"
                 icon="more_vert"
             />
             <bc_button
+                class="ui-kit-pre__button"
                 icon="more_vert"
                 disabled
             />
+        </div>
+        <div class="ui-kit-pre__elements-group">
             <bc_button
+                class="ui-kit-pre__button"
                 icon="more_vert"
                 simple
             />
             <bc_button
+                class="ui-kit-pre__button"
                 icon="more_vert"
                 simple
                 disabled
             />
         </div>
-        <div  class="ui-kit-pre__group">
+        <div  class="ui-kit-pre__elements-group">
             <bc_switcher
                 v-model="selectedIcon"
                 :icons="['view_list', 'view_module', 'more', 'face']"
             />
             Выбрана иконка {{ selectedIcon }}
         </div>
-        <div  class="ui-kit-pre__group">
-            <bc_input
-                v-model="inputText"
-                label="Имя автора"
-                error="Даже проверять это не буду"
-                border="none"
-                :limit="30"
-            />
-        </div>
+        <bc_input
+            v-model="inputText"
+            label="Имя"
+            border="none"
+            :limit="5"
+        />
+        <bc_input
+            v-model="inputText"
+            label="Не Имя"
+            error="Даже проверять это не буду"
+            border="none"
+            :limit="10"
+        />
     </div>
 </template>
 
@@ -83,14 +99,14 @@ export default {
     display: flex;
     flex-direction: column;
 
-    &__group {
+    &__elements-group {
         display: flex;
         flex-direction: row;
-        margin: 8px 0;
+        margin: 8px;
+    }
 
-        .bc-button {
-            margin: 0 8px;
-        }
+    &__button {
+        margin: 0 4px;
     }
 }
 </style>
