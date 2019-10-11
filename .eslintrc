@@ -39,7 +39,6 @@
         }],
         "prefer-rest-params": 2,
         "eqeqeq": [2, "always"],
-        "no-case-declarations": 2,
         "no-unneeded-ternary": 2,
         "no-else-return": ["error", { "allowElseIf": true }],
         "newline-per-chained-call": [2, { "ignoreChainWithDepth": 2 }],

@@ -9,7 +9,6 @@
     >
         <bc_icon
             v-if="icon"
-            big
             :name="icon"
         />
         <bc_text

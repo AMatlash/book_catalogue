@@ -56,18 +56,23 @@
             Выбрана иконка {{ selectedIcon }}
         </div>
         <bc_input
-            v-model="inputText"
+            v-model="inputText1"
             label="Имя"
-            border="none"
+            error="Даже проверять это не буду"
+            :limit="30"
+        />
+        <bc_input
+            v-model="inputText2"
+            label="Не Имя"
             :limit="5"
         />
         <bc_input
-            v-model="inputText"
-            label="Не Имя"
-            error="Даже проверять это не буду"
-            border="none"
-            :limit="10"
+            v-model="inputText3"
+            label="Многострочное имя"
+            multiline
+            :limit="300"
         />
+        <bc_image/>
     </div>
 </template>
 
@@ -75,7 +80,8 @@
 import {
     bc_button,
     bc_switcher,
-    bc_input
+    bc_input,
+    bc_image
 } from '@ui-kit';
 
 export default {
@@ -83,18 +89,21 @@ export default {
     components: {
         bc_button,
         bc_switcher,
-        bc_input
+        bc_input,
+        bc_image
     },
     data() {
         return {
             selectedIcon: 0,
-            inputText: ''
+            inputText1: 'azaza',
+            inputText2: '',
+            inputText3: ''
         };
     }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .ui-kit-pre {
     display: flex;
     flex-direction: column;

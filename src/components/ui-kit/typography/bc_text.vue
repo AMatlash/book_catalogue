@@ -21,6 +21,7 @@ export default {
     font-size: 24px;
     font-style: normal;
     line-height: 32px;
+    user-select: none;
 }
 
 </style>

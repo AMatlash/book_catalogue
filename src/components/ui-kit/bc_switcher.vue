@@ -51,6 +51,7 @@ export default {
 .bc-switcher {
     display: flex;
     flex-direction: row;
+    height: 48px;
     border-radius: 25px;
     box-shadow: $element-shadow;
     user-select: none;
@@ -64,7 +65,7 @@ export default {
         padding: 0 6px;
         color: $text-color;
         cursor: pointer;
-        transition: all .4s;
+        transition: all .2s;
 
         &:hover {
             color: $text-color-hover;

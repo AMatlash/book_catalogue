@@ -28,6 +28,9 @@ export default {
 <style lang="scss" scoped>
 
 .bc-icon {
+    font-size: 24px;
+    user-select: none;
+
     &_small {
         font-size: 18px;
     }
